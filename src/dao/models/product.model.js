@@ -13,7 +13,6 @@ const productSchema = new mongoose.Schema({
 });
 
 
-// Middleware para validar stock antes de guardar
 productSchema.pre("save", function(next) {
   if (this.stock < 0) {
     throw new Error("Stock no puede ser negativo");

@@ -27,7 +27,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Ruta POST para login
 router.post("/login",
   passport.authenticate("login", { session: false }),
   async (req, res) => {
@@ -52,8 +51,8 @@ router.post("/login",
 
   
 router.get('/logout', (req, res) => {
-  res.clearCookie('token'); // elimina la cookie JWT
-  res.redirect('/'); // redirige al home
+  res.clearCookie('token'); 
+  res.redirect('/');
 });
 
 

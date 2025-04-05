@@ -26,7 +26,7 @@ router.post("/:cid/products/:pid", async (req, res) => {
     const { cid, pid } = req.params;
     let { quantity } = req.body;
 
-    quantity = parseInt(quantity) || 1; // 👈 Aseguramos que sea un número
+    quantity = parseInt(quantity) ||
 
     await CartService.addProductToCart(cid, pid, quantity);
 

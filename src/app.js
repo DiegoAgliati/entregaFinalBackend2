@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 import sessionsRouter from './routes/sessions.routes.js';
 import cartsRouter from './routes/carts.routes.js';
 import viewsRouter from './routes/views.routes.js';
-import productsRouter from './routes/products.routes.js'; // Importar la nueva ruta
+import productsRouter from './routes/products.routes.js'; 
 
 // Configuraciones
 import './config/passport.config.js';
@@ -45,15 +45,15 @@ app.engine('.hbs', exphbs.engine({
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-// 2. Middlewares básicos (ORDEN CRÍTICO)
+// 2. Middlewares básicos
 app.use(express.json()); // Para parsear JSON
-app.use(express.urlencoded({ extended: true })); // Para parsear form-data
-app.use(cookieParser()); // Para manejar cookies
+app.use(express.urlencoded({ extended: true })); 
+app.use(cookieParser()); 
 app.use(express.static(path.join(__dirname, "../public")));
 
 // 3. Autenticación
-app.use(passport.initialize()); // Inicializar Passport
-app.use(userToViews); // Middleware para inyectar usuario en vistas
+app.use(passport.initialize()); 
+app.use(userToViews); 
 
 // 4. Conexión a MongoDB
 mongoose.connect(process.env.MONGO_URI)
@@ -63,13 +63,13 @@ mongoose.connect(process.env.MONGO_URI)
     process.exit(1);
   });
 
-// 5. Rutas principales (ORDEN CRÍTICO)
-app.use('/api/sessions', sessionsRouter); // Rutas de autenticación
-app.use('/api/carts', cartsRouter); // Rutas del carrito
-app.use('/api/products', productsRouter); // Usar la ruta de productos
-app.use('/', viewsRouter); // Rutas de vistas (DEBE IR ÚLTIMO)
+// 5. Rutas principales
+app.use('/api/sessions', sessionsRouter); 
+app.use('/api/carts', cartsRouter); 
+app.use('/api/products', productsRouter); 
+app.use('/', viewsRouter); 
 
-// 6. Manejo de errores (DEBE SER EL ÚLTIMO MIDDLEWARE)
+// 6. Manejo de errores
 app.use((err, req, res, next) => {
   console.error('🔥 Error:', err.stack);
   res.status(500).render('pages/error', {

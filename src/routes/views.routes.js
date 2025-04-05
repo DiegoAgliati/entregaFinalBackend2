@@ -1,18 +1,17 @@
-import { Router } from 'express'; // Corregir importación
+import { Router } from 'express';
 import { Product } from '../dao/models/product.model.js';
-import { Cart } from '../dao/models/cart.model.js'; // Importar modelo Cart
-import passport from 'passport'; // Corregir importación
-
+import { Cart } from '../dao/models/cart.model.js'; 
+import passport from 'passport'; 
 const router = Router();
 
-// Ruta home
+
 router.get('/', async (req, res) => {
     res.render('pages/home', {
         title: 'Inicio'
     });
 });
 
-// Ruta productos
+
 router.get('/products', 
     passport.authenticate('current', { session: false }),
     async (req, res) => {
@@ -32,7 +31,7 @@ router.get('/products',
       }
     }
   );
-// Ruta carrito (corregida la autenticación y sintaxis)
+
 router.get('/cart',
   passport.authenticate('current', { session: false }),
   async (req, res) => {
@@ -78,7 +77,6 @@ router.get('/register', (req, res) => {
     });
 });
 
-// Ruta login
 router.get('/login', (req, res) => {
     res.render('pages/login', {
         title: 'Ingreso'

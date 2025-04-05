@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { Product } from '../dao/models/product.model.js'; // Asegúrate de importar el modelo correcto
+import { Product } from '../dao/models/product.model.js'; 
 
 const router = Router();
 
@@ -21,7 +21,7 @@ router.post('/products', async (req, res) => {
       stock,
       category,
       code,
-      status: status || true, // El status por defecto es 'true'
+      status: status || true,
       thumbnails: thumbnails || [],
     });
 

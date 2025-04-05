@@ -22,7 +22,7 @@ export class CartService {
 
     const ticket = await TicketService.createTicket({
       amount: totalAmount,
-      purchaser: cart.user?.email || 'Unknown',  // Defaulting to 'Unknown' if email is not found
+      purchaser: cart.user?.email || 'Unknown',
     });
 
     // Limpiar productos procesados del carrito
@@ -31,8 +31,8 @@ export class CartService {
     );
 
     // Vaciar el carrito después de procesar la compra
-    cart.products = [];  // Limpiar el carrito completamente
-    await cart.save();   // Guardar el carrito vacío en la base de datos
+    cart.products = [];  
+    await cart.save();  
 
     return {
       ticket,

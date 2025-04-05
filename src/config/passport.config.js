@@ -7,7 +7,7 @@ import { Strategy as LocalStrategy } from 'passport-local';
 
 
 const cookieExtractor = (req) => {
-  return req?.cookies?.token || null; // ← Nombre de la cookie debe ser "token"
+  return req?.cookies?.token || null;
 };
 
 passport.use("current", new JWTStrategy(
