@@ -1,0 +1,45 @@
+<h1 class="carrito-titulo">🛒 Tu Carrito</h1>
+
+{{#if cart.products.length}}
+  <div class="carrito-contenedor">
+    {{#each cart.products}}
+      <div class="carrito-item">
+        <div class="carrito-info">
+          <h5 class="producto-nombre">{{product.title}}</h5>
+          <p class="producto-cantidad">Cantidad: {{quantity}}</p>
+        </div>
+       <div class="producto-eliminar">
+      <button class="btn-delete-item" data-product-id="{{product._id}}" data-cart-id="{{../cart._id}}">
+  🗑️ Eliminar
+</button>
+
+    </div>
+        <div class="producto-precio">
+          ${{multiply product.price quantity}}
+        </div>
+      </div>
+    {{/each}}
+
+    <div class="carrito-total">
+      <span>Total:</span>
+      <span class="monto-total">${{total}}</span>
+    </div>
+
+    <div class="carrito-finalizar mt-3">
+  <button 
+  id="checkout-btn" 
+  class="btn btn-success btn-lg" 
+  data-cart-id="{{cart._id}}">
+  Finalizar Compra
+</button>
+
+  <button id="btn-clear-cart" data-cart-id="{{cart._id}}">
+  🧹 Vaciar Carrito
+</button>
+
+</div>
+{{else}}
+  <div class="carrito-vacio">
+    🛍️ Tu carrito está vacío, ¡agregá productos para comenzar!
+  </div>
+{{/if}}

@@ -1,0 +1,355 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+  }
+  
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .btn-outline-dark {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .alert-success {
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-weight: 700;
+    color: #222;
+  }
+  
+  .login-box {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-box .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-box input.form-control {
+    border-radius: 6px;
+    padding: 0.6rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+  }
+  
+  .login-box .btn-primary {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+  }
+  
+  .login-box .btn-primary:hover {
+    background-color: #111;
+  }
+  
+  .login-box .form-text {
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+
+  .home-box {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .home-box .highlight {
+    color: #0d6efd;
+  }
+  
+  .home-box .btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .features h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .features p {
+    margin: 0;
+    color: #555;
+  }
+
+  .navbar-custom {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar-custom .navbar-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #0d6efd;
+    text-decoration: none;
+  }
+  
+  .navbar-custom .navbar-links a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .navbar-custom .navbar-links a:hover {
+    color: #0d6efd;
+  }
+  
+  .footer-custom {
+    padding: 2rem 1rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .user-welcome {
+    padding: 1rem;
+    background: #e9f7ff;
+    border-left: 5px solid #0d6efd;
+    border-radius: 8px;
+    color: #222;
+  }
+  
+  .carrito-titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .carrito-contenedor {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  }
+  
+  .carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+  }
+  
+  .carrito-info {
+    flex: 1;
+  }
+  
+  .producto-nombre {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .producto-cantidad {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .producto-precio {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2e7d32;
+    text-align: right;
+    min-width: 100px;
+  }
+  
+  .carrito-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    border-top: 2px solid #ccc;
+    padding-top: 1rem;
+  }
+  
+  .monto-total {
+    color: #388e3c;
+  }
+  
+  .carrito-finalizar {
+    text-align: right;
+    margin-top: 1.5rem;
+  }
+  
+  .btn-finalizar {
+    background-color: #43a047;
+    color: white;
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-finalizar:hover {
+    background-color: #2e7d32;
+  }
+  
+  .carrito-vacio {
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+  }
+ /* Contenedor del formulario de registro */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.card-body {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.card-header h4 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
+
+.text-secondary:hover {
+  color: #0056b3 !important;
+}
+
+.mt-3.text-center a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.mt-3.text-center a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Enlace de volver al login */
+.card-body a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes de márgenes */
+.card-body form {
+  max-width: 400px;
+  margin: 0 auto;
+}

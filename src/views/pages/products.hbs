@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Catálogo de Productos</h1>
+
+  {{#if user}}
+  <div class="user-welcome mb-4">
+    <p class="m-0">👋 ¡Hola <strong>{{user.first_name}}</strong>!</p>
+    <small class="text-muted">Rol: {{user.role}}</small>
+  </div>
+  {{/if}}
+  <div class="row">
+  {{#each products}}
+    <div class="col-md-6 mb-4">
+      <div class="card p-3">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">{{this.description}}</p>
+        <p class="card-text fw-bold">${{this.price}}</p>
+
+        <button 
+          class="btn btn-outline-dark add-to-cart-btn" 
+          data-product-id="{{this._id}}" 
+          data-cart-id="{{../user.cart._id}}"
+        >
+          Agregar
+        </button>
+      </div>
+    </div>
+  {{/each}}
+</div>

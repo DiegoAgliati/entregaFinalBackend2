@@ -1,0 +1,28 @@
+{{!-- summary.hbs --}}
+{{#extend "main"}}
+  {{#content "main"}}
+    <h2>Resumen de la compra</h2>
+
+    <p><strong>ID del ticket:</strong> {{ticket.code}}</p>
+    <p><strong>Fecha de compra:</strong> {{ticket.purchase_datetime}}</p>
+    <p><strong>Total:</strong> ${{ticket.amount}}</p>
+
+    <h3>Productos procesados:</h3>
+    <ul>
+      {{#each productsProcessed}}
+        <li>{{this.product.title}} - Cantidad: {{this.quantity}} - Subtotal: ${{this.product.price this.quantity}}</li>
+      {{/each}}
+    </ul>
+
+    {{#if unprocessedProducts.length}}
+      <h3>Productos no procesados:</h3>
+      <ul>
+        {{#each unprocessedProducts}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>¡Todos tus productos fueron procesados exitosamente!</p>
+    {{/if}}
+  {{/content}}
+{{/extend}}

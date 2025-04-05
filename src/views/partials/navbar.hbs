@@ -1,0 +1,15 @@
+<nav class="navbar-custom">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a href="/" class="navbar-logo">TechStore</a>
+    <div class="navbar-links">
+      <a href="/products">Catálogo</a>
+      <a href="/cart">Carrito</a>
+
+      {{#if user}}
+        <a href="/api/sessions/logout">Salir</a>
+      {{else}}
+        <a href="/login">Ingresar</a>
+      {{/if}}
+    </div>
+  </div>
+</nav>

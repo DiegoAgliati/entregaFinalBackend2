@@ -1,0 +1,21 @@
+<div class="login-box">
+  <h2>Iniciar Sesión</h2>
+
+  <form action="/api/sessions/login" method="POST">
+    <div>
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" required />
+    </div>
+
+    <div>
+      <label for="password" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" name="password" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+  </form>
+
+  <p class="form-text">
+    ¿No tienes cuenta? <a href="/register">Regístrate</a>
+  </p>
+</div>
