@@ -6,6 +6,7 @@ import { config } from 'dotenv';
 import exphbs from 'express-handlebars';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import mocksRouter from './routes/mocks.router.js';
 
 // Routers
 import sessionsRouter from './routes/sessions.routes.js';
@@ -51,6 +52,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser()); 
 app.use(express.static(path.join(__dirname, "../public")));
 
+
 // 3. Autenticación
 app.use(passport.initialize()); 
 app.use(userToViews); 
@@ -67,6 +69,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/api/sessions', sessionsRouter); 
 app.use('/api/carts', cartsRouter); 
 app.use('/api/products', productsRouter); 
+app.use('/api/mocks', mocksRouter);
 app.use('/', viewsRouter); 
 
 // 6. Manejo de errores

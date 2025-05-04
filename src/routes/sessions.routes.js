@@ -4,6 +4,7 @@ import { UserDTO } from "../dao/dtos/user.dto.js";
 import { AuthService } from '../services/auth.service.js';
 import jwt from "jsonwebtoken";
 import { config } from "dotenv";
+import User from "../dao/models/user.model.js";
 
 const router = Router();
 
@@ -49,7 +50,22 @@ router.post("/login",
   }
 );
 
-  
+router.get('/users', async (req, res) => {
+  try {
+    const users = await User.find().select('-password').lean();
+    res.json({
+      status: 'success',
+      payload: users
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: 'Error al obtener usuarios',
+      error: error.message
+    });
+  }
+});
+
 router.get('/logout', (req, res) => {
   res.clearCookie('token'); 
   res.redirect('/');
