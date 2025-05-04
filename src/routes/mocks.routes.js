@@ -1,7 +1,8 @@
 import { Router } from 'express';
-import { generateMockUsers, generateMockProducts } from '../mocks/users.mock.js';
-import User from '../dao/models/user.model.js';
-import Product from '../dao/models/product.model.js';
+import { generateMockUsers } from '../mocks/users.mock.js';
+import { generateMockProducts } from '../mocks/products.mock.js';
+import { User } from '../dao/models/user.model.js';
+import { Product } from '../dao/models/product.model.js';
 
 const router = Router();
 

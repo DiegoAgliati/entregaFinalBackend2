@@ -17,7 +17,7 @@ export const generateMockUsers = async (count) => {
       last_name: faker.person.lastName(),
       email: faker.internet.email(),
       age: faker.number.int({ min: 18, max: 80 }),
-      password: "defaultPassword123",
+      password: "coder123",
       role: roles[Math.floor(Math.random() * roles.length)]
     };
     

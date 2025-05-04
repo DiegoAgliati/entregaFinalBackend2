@@ -6,7 +6,7 @@ import { config } from 'dotenv';
 import exphbs from 'express-handlebars';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import mocksRouter from './routes/mocks.router.js';
+import mocksRouter from './routes/mocks.routes.js';
 
 // Routers
 import sessionsRouter from './routes/sessions.routes.js';

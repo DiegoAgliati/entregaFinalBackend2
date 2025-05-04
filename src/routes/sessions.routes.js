@@ -4,7 +4,7 @@ import { UserDTO } from "../dao/dtos/user.dto.js";
 import { AuthService } from '../services/auth.service.js';
 import jwt from "jsonwebtoken";
 import { config } from "dotenv";
-import User from "../dao/models/user.model.js";
+import { User } from "../dao/models/user.model.js";
 
 const router = Router();
 
